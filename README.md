@@ -1,8 +1,8 @@
 # Labour Scheduling Intelligence System
 ### AI-powered CBA compliance scheduling for unionized food service operations
 
-Built for a unionized food service operation at a Canadian university campus  
-Collective Agreement: UNITE HERE Local 75
+Built for a unionized food service operations in CANADA  
+
 
 ---
 
