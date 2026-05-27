@@ -257,22 +257,22 @@ server/src/
 ---
 
 ### Staff Lookup
-![Dashboard](screenshots/staff.png)
+![Dashboard](screenshots/STAFF.png)
 
 ---
 
 ### Weekly Schedule — Bulletin Board View
-![Schedule](screenshots/schedule.png)
+![Schedule](screenshots/SCHEDULE.png)
 
 ---
 
 ### Hours Report — Seniority Rankings
-![Hours](screenshots/hours.png)
+![Hours](screenshots/HOURS.png)
 
 ---
 
 ### CBA Violations — Art 32.06 Breach Tracker
-![Violations](screenshots/violations.png)
+![Violations](screenshots/VIOLATIONS.png)
 
 ## License
 
