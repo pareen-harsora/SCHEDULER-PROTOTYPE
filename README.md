@@ -91,23 +91,31 @@ port 5173                      port 3001
 ---
 
 ## Data Model
-employees         — 100 employees, hire dates 1995–2025
-├── 60 Full Time (max 40hrs/week)
-├── 40 Part Time (max 24hrs/week)
+
+**Employees — 100 total**
+```
+├── 60 Full Time  (max 40hrs/week)
+├── 40 Part Time  (max 24hrs/week)
 ├── 25 Cooks
 ├── 61 General Help Workers
 ├── 10 Bakers
-└── 4  Receivers
-stations (10)     — fixed template matching real operation
+└──  4 Receivers
+Hire dates range: 1995 – 2025
+```
+
+**Stations — 10 total**
+```
 ├── BOH: Entree, Pizza, Pho, Omelette/Pasta, Salad/Deli
 ├── FOH: FOH, Cashier/FOH, Dish Area, GH Bakery
 └── Specialized: Receiver
-shift_slots (43)  — exact shift times from real schedule
-├── AM shifts:  ~06:00–14:00
-├── MID shifts: ~11:00–19:00
-└── PM shifts:  ~15:00–23:30
+```
 
----
+**Shift Slots — 43 total**
+```
+├── AM shifts:  ~06:00 – 14:00
+├── MID shifts: ~11:00 – 19:00
+└── PM shifts:  ~15:00 – 23:30
+```
 
 ## Getting Started
 
@@ -177,42 +185,44 @@ Click Analyze on the Dashboard. Claude reads the full week's data and returns a 
 ---
 
 ## Project Structure
-scheduler-prototype/
-├── client/                    ← React frontend
-│   └── src/
-│       ├── api/
-│       │   └── client.js      ← Axios API client
-│       ├── components/
-│       │   ├── Badge.jsx
-│       │   ├── LoadingSpinner.jsx
-│       │   ├── Navbar.jsx
-│       │   ├── PageHeader.jsx
-│       │   └── StatCard.jsx
-│       ├── pages/
-│       │   ├── Dashboard.jsx  ← Generate + AI analysis
-│       │   ├── Schedule.jsx   ← Bulletin board grid
-│       │   ├── Hours.jsx      ← Seniority hour report
-│       │   ├── Violations.jsx ← CBA breach tracker
-│       │   └── Staff.jsx      ← Employee management
-│       └── store/
-│           └── index.js       ← Zustand global state
-│
-└── server/                    ← Node.js backend
-└── src/
+
+**Client (React Frontend)**
+```
+client/src/
+├── api/
+│   └── client.js          ← Axios API client
+├── components/
+│   ├── Badge.jsx
+│   ├── LoadingSpinner.jsx
+│   ├── Navbar.jsx
+│   ├── PageHeader.jsx
+│   └── StatCard.jsx
+├── pages/
+│   ├── Dashboard.jsx      ← Generate + AI analysis
+│   ├── Schedule.jsx       ← Bulletin board grid
+│   ├── Hours.jsx          ← Seniority hour report
+│   ├── Violations.jsx     ← CBA breach tracker
+│   └── Staff.jsx          ← Employee management
+└── store/
+    └── index.js           ← Zustand global state
+```
+
+**Server (Node.js Backend)**
+```
+server/src/
 ├── db/
-│   ├── schema.js      ← SQLite table definitions
-│   └── seed.js        ← Station + employee data
+│   ├── schema.js          ← SQLite table definitions
+│   └── seed.js            ← Station + employee data
 ├── engine/
-│   └── scheduler.js   ← CBA seniority engine
+│   └── scheduler.js       ← CBA seniority engine
 ├── routes/
 │   ├── employees.js
 │   ├── stations.js
 │   ├── schedule.js
 │   ├── violations.js
-│   └── ai.js          ← Claude API integration
-└── server.js          ← Express entry point
-
----
+│   └── ai.js              ← Claude API integration
+└── server.js              ← Express entry point
+```
 
 ## Business Impact
 
@@ -238,6 +248,31 @@ scheduler-prototype/
 - [ ] Multi-location support
 
 ---
+
+## Screenshots
+
+### Dashboard 
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+### Staff Lookup
+![Dashboard](screenshots/staff.png)
+
+---
+
+### Weekly Schedule — Bulletin Board View
+![Schedule](screenshots/schedule.png)
+
+---
+
+### Hours Report — Seniority Rankings
+![Hours](screenshots/hours.png)
+
+---
+
+### CBA Violations — Art 32.06 Breach Tracker
+![Violations](screenshots/violations.png)
 
 ## License
 

@@ -69,8 +69,8 @@ export default function Dashboard() {
     <div>
       {/* Header */}
       <PageHeader
-        title="Schedule Dashboard"
-        subtitle="Aramark Canada — UTSC Campus | UNITE HERE Local 75"
+        title="Main Dashboard"
+
       />
 
       {/* Week Selector */}
@@ -199,11 +199,9 @@ export default function Dashboard() {
           <div className="flex items-center justify-between mb-4">
             <div>
               <h2 className="text-sm font-semibold text-slate-900">
-                AI Compliance Report
+                 Compliance Report
               </h2>
-              <p className="text-xs text-slate-500">
-                Claude analyzes CBA compliance + grievance risk
-              </p>
+
             </div>
             {!aiAnalysis && (
               <button
